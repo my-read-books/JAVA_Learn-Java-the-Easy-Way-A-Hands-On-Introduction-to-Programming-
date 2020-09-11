@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:lines="4"
+            android:padding="20dp"
+            android:text="Secret messages \n are so cool, \n aren't they?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="107dp"
+                android:layout_height="29dp"
+                android:max="26"
+                android:progress="26" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Key: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/txtKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:width="40dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="13" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:text="Encode/Decode" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:lines="4"
+            android:padding="20dp" />
+
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Up ^" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
